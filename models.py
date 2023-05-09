@@ -22,7 +22,7 @@ class UserClick():
         
         
     @classmethod
-    def all(cls) -> list[dict]:
+    def all(cls) -> list:
 
         all_items = []
         

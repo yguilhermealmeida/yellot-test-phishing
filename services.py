@@ -37,7 +37,7 @@ def get_user_click_from_response(response:str) -> UserClick:
     
     return UserClick(**user_click_from_response)
 
-def get_all_users_clicks_to_response() -> list[dict]:
+def get_all_users_clicks_to_response() -> list:
     return UserClick.all()
 
 def get_user_from_email(email:str) -> str:
@@ -69,7 +69,7 @@ def make_html_from_phishing_email(email:str) -> str:
     return html
 
 
-def send_phishing_emails(email:str, password:str, to_list: list[str]) -> list[tuple]:
+def send_phishing_emails(email:str, password:str, to_list: list) -> list:
     email_service = EmailService(email, password)
     email_service.connect()
     email_service.login()
